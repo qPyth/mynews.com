@@ -1,0 +1,21 @@
+{
+    "name": "iskakov/news-site",
+    "description": "My news site",
+    "type": "project",
+    "require": {
+        "slim/slim": "^4.10",
+        "twig/twig": "^3.4",
+        "slim/psr7": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iskakov\\NewsSite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Iskakov"
+        }
+    ],
+    "minimum-stability": "stable"
+}
