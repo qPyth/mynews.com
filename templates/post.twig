@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+{% block body %}
+<div class="container w-75 d-flex flex-column gap-3 mt-3">
+    <h1>{{ post.title|escape }}</h1>
+    <div class="newsImage">
+        <img src="{{ post.image_path|raw }}" class="img-fluid" alt="newsImage">
+    </div>
+    <div class="newsInfo row">
+        <span class="text-muted">Adil Iskakov | {{ post.published_date|date("F d, Y")}} </span>
+    </div>
+    <div class="newsText">
+        {{ post.content|raw }}
+    </div>
+</div>
+{% endblock %}
