@@ -1,0 +1,15 @@
+{% for post in latestPosts %}
+    <div class="card news-card">
+        <div>
+            <img src="{{ asset_url(post.image_path) }}" class="card-img-top card-image" alt="...">
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ post.title|escape }}</h5>
+            <p class="card-text">{{ post.description|escape }}</p>
+        </div>
+        <div class="card-footer">
+            <p class="text-muted card-author">{{ post.author|escape}} | {{ post.date|date('F d') }} | <i class="far fa-eye">&nbsp;{{ post.views }}</i> | <i class="far fa-comment fa-pulse">&nbsp;11</i></p>
+            <a href="{{ post.url_key }}" class="login btn btn-dark">Перейти к новости</a>
+        </div>
+    </div>
+{% endfor %}

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace NewsSite\Routes;
+namespace NewsSite\Controllers;
 
 
 use Psr\Http\Message\ResponseInterface as Response;

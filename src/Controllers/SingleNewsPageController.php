@@ -1,13 +1,13 @@
 <?php
 
 
-namespace NewsSite\Routes;
+namespace NewsSite\Controllers;
 use NewsSite\PostMapper;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Twig\Environment;
 
-class SingleNewsPageRoute
+class SingleNewsPageController
 {
     /**
      * @var PostMapper

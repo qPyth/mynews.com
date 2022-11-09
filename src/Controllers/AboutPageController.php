@@ -1,13 +1,13 @@
 <?php
 
 
-namespace NewsSite\Routes;
+namespace NewsSite\Controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Twig\Environment;
 
-class AboutPageRoute
+class AboutPageController
 {
     private Environment $view;
 

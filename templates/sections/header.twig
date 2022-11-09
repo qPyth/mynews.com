@@ -1,0 +1,36 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">MyNews</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                    <a class="nav-link" href="about">О нас</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                {% if username %}
+                    <span class="text-white">{{ username }}</span>
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/public/assets/images/User.svg">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item" href="#">Личный кабинет</a></li>
+                        <li><a class="dropdown-item" href="#">Выйти</a></li>
+                    {% else %}
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/public/assets/images/User.svg">
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                            <li><a class="dropdown-item" href="#">Войти</a></li>
+                            <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                {% endif %}
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+</header>

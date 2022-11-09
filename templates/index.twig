@@ -1,28 +1,17 @@
 {% extends 'base.twig' %}
 
 {% block body %}
-<main class="container col-lg-9">
-    <div class="main__title mb-3 mt-3 text-center">
-        <h1>News</h1>
+<main class="mb-3 mt-3">
+    <div class="main__title  text-center">
+        <h1>Новости</h1>
     </div>
-    <div class="container">
-        <div class="row">
-            {% for post in posts %}
-            <div class="col-lg-4 col-sm-6 mb-5" style="height: 450px">
-                <div class="card" style="height: 100%">
-                    <div class="card_image">
-                        <img src="{{ post.image_path|raw }}" class="img-fluid" style="width: 287px;height: 197px" alt="...">
-                    </div>
-                    <div class="card-body d-flex justify-content-between flex-column">
-                        <div>
-                            <h5 class="card-title">{{ post.title|escape }}</h5>
-                            <p class="card-text">{{ post.description|escape }}</p>
-                        </div>
-                        <a href="/{{ post.url_key|escape }}" class="btn btn-primary">Читать полностью</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+    <div class="posts">
+        {% include 'sections/mainPostCard.twig' %}
+        <div class="section-title">
+            <h2>Последние новости</h2>
+        </div>
+        <div class="latest-posts justify-content-center gap-4 row">
+            {% include 'sections/postCard.twig' %}
         </div>
     </div>
 </main>

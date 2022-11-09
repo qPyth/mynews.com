@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
-    background-color: #0a53be;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAF8F6;
 }
+/*images*/
+img {
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.posts {
+    max-width: 950px;
+}
+
+/*news cards*/
+
+.main-card {
+    width: 100%;
+}
+.main-post-image {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.news-card {
+    width: 300px;
+    padding: 0;
+}
+
+.card-footer p {
+    margin-bottom: 8px;
+}
+
+.card-author {
+    font-size: 12px;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+}
+
+.card-info {
+    display: flex;
+}
+/*.login::after {*/
+/*    content: url("/public/assets/images/user.svg");*/
+/*    position: absolute;*/
+
+/*}*/

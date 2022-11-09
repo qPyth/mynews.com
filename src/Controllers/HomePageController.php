@@ -1,7 +1,7 @@
 <?php
+declare(strict_types=1);
 
-
-namespace NewsSite\Routes;
+namespace NewsSite\Controllers;
 
 use NewsSite\PostMapper;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -9,7 +9,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Twig\Environment;
 
 
-class HomeRoute
+class HomePageController
 {
     /**
      * @var PostMapper
@@ -30,10 +30,16 @@ class HomeRoute
 
     public function execute(Request $request, Response $response): Response
     {
-            $body = $this->view->render('index.twig');
-            $response->getBody()->write($body);
-            return $response;
-        }
+        $username = $_SESSION['name'] = '';
+        $mostViewedPost = $this->postMapper->getMostViewedPost();
+        $latestPosts = $this->postMapper->getLatestPosts();
+        $body = $this->view->render('index.twig', [
+            'mostViewedPost' => $mostViewedPost,
+            'latestPosts' => $latestPosts,
+            'username' => $username
+        ]);
+        $response->getBody()->write($body);
+        return $response;
+    }
 }
-
 

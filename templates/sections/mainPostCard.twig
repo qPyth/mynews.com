@@ -1,0 +1,13 @@
+<div class="main-card card mb-3 col">
+    <div class="main-post-image card">
+        <img src="{{ asset_url(mostViewedPost.image_path)}}" class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ mostViewedPost.title|escape }}</h5>
+        <p class="card-text">{{ mostViewedPost.description|escape }}</p>
+    </div>
+    <div class="card-footer">
+        <p class="text-muted card-author">{{ mostViewedPost.author|escape}} | {{ mostViewedPost.date|date('F d, Y') }} | <i class="far fa-eye">&nbsp;{{ mostViewedPost.views }}</i> | <i class="far fa-comment fa-pulse">&nbsp;11</i></p>
+        <a href="{{ mostViewedPost.url_key }}" class="btn btn-dark">Перейти к новости</a>
+    </div>
+</div>
